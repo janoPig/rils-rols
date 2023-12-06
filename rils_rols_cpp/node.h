@@ -8,7 +8,7 @@
 
 using namespace std;
 
-constexpr inline auto M_PI = 3.14159265358979323846;
+#define M_PI 3.14159265358979323846
 
 # define PRECISION 12
 # define EPS pow(10, -PRECISION)
