@@ -618,9 +618,10 @@ public:
 			exit(1);
 		}
 
+		Xe.resize(feat_cnt);
 		for (int i = 0; i < feat_cnt; i++)
 		{
-			Xe.resize(data_cnt);
+			Xe[i].resize(data_cnt);
 		}
 
 		for (int i = 0; i < data_cnt; i++)
