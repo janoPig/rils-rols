@@ -617,13 +617,6 @@ public:
 			cout << "Size of X " << buf_X.size << " is not the same as the product of data count and feature count " << data_cnt * feat_cnt << endl;
 			exit(1);
 		}
-		py::buffer_info buf_y = y.request();
-		double* ptr_y = (double*)buf_y.ptr;
-		if (buf_y.size != data_cnt)
-		{
-			cout << "Size of y " << buf_y.size << " is not the same as the data count " << data_cnt << endl;
-			return false;
-		}
 
 		for (int i = 0; i < feat_cnt; i++)
 		{
