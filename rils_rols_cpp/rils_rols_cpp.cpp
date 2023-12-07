@@ -615,7 +615,7 @@ public:
 		double* ptr_X = (double*)buf_X.ptr;
 		if (buf_X.size != data_cnt * feat_cnt) {
 			cout << "Size of X " << buf_X.size << " is not the same as the product of data count and feature count " << data_cnt * feat_cnt << endl;
-			exit(1);
+			return false;
 		}
 
 		Xe.resize(feat_cnt);
@@ -631,6 +631,7 @@ public:
 				Xe[j][i] = ptr_X[i * feat_cnt + j];
 			}
 		}
+		return true;
 	}
 
 	bool get_y(py::array_t<double> y, int data_cnt, Eigen::ArrayXd& ye)
@@ -647,6 +648,7 @@ public:
 		{
 			ye[i] = ptr_y[i];
 		}
+		return true;
 	}
 
 	void fit(py::array_t<double> X, py::array_t<double> y, int data_cnt, int feat_cnt)
