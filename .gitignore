@@ -15,3 +15,8 @@ profile_cumtime.txt
 profile_tottime.txt
 tmp.txt
 rils_rols/__pycache__/
+build/
+rils_rols.egg-info/
+rils_rols_cpp/.vs/
+rils_rols_cpp/x64/
+*.vcxproj.user

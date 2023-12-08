@@ -9,7 +9,7 @@ long_description = "You can find minimal working example and other information h
 if os.name=='nt':
     compile_args = ["/std:c++17", "/I rils_rols_cpp", "/O2"]
 else:
-    compile_args = ["-std=c++17", "-O3"]
+    compile_args = ["-std=c++17", "-O3", "-march=native"]
 
 ext_modules=[Pybind11Extension(
         'rils_rols_cpp', 
